@@ -709,11 +709,6 @@ int main(int argc, char **argv)
 					ROS_INFO("No valid gesture detected");
 					srv_spat.request.center = obstacles[objid-1];
 					pointing_txt = "Not detected";
-					// Relation: "near" FOR OBJECT
-					srv_spat.request.dimx.data = 1;
-					srv_spat.request.dimy.data = 1;
-					srv_spat.request.relationship.data = 4;
-					state = generateLandscape(cli_spat, cli_pert, srv_spat, srv_pert, state, landscape);
 				}	
 				
 				gestproc_time = ros::Time::now();			
